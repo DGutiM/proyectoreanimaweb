@@ -148,6 +148,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .program-card::after { position: absolute; right: -75px; bottom: -75px; width: 210px; height: 210px; border: 45px solid currentColor; border-radius: 50%; content: ''; opacity: .055; }
 .essential-card { color: var(--ink); }
 .erc-card { background: linear-gradient(145deg, var(--aqua) 0%, var(--aqua-dark) 100%); color: #fff; }
+.program-brand-row { display: flex; min-height: 52px; align-items: center; justify-content: space-between; gap: 24px; }
+.erc-logo { width: 158px; height: auto; object-fit: contain; }
 .card-label { align-self: flex-start; border-radius: 99px; background: var(--red-soft); padding: 7px 12px; color: var(--red-dark); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .erc-card .card-label { background: rgb(255 255 255 / 14%); color: #fff; }
 .program-card h3 { max-width: 470px; margin: 24px 0 18px; font-size: 31px; line-height: 1.08; letter-spacing: -.03em; }
@@ -320,6 +322,8 @@ footer { padding-block: 48px 100px; background: #fff; }
   .program-grid { grid-template-columns: 1fr; }
   .program-card { min-height: 540px; padding: 28px; }
   .program-card h3 { font-size: 28px; }
+  .program-brand-row { gap: 12px; }
+  .erc-logo { width: 122px; }
   .duration { align-items: flex-start; flex-direction: column; gap: 2px; }
   .experience { padding-block: 82px; }
   .experience-media { min-height: 370px; }

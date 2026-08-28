@@ -171,7 +171,10 @@ export default function Home() {
         </div>
         <div className="program-grid">
           <article className="program-card essential-card">
-            <span className="card-label">Curso oficial ERC</span>
+            <div className="program-brand-row">
+              <span className="card-label">Curso oficial ERC</span>
+              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="316" height="155" />
+            </div>
             <h3>Basic Life Support Provider · SVB y DEA</h3>
             <p className="duration"><strong>4 horas</strong><span>Práctica presencial</span></p>
             <p>
