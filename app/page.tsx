@@ -4,6 +4,21 @@ const email = 'proyectoreanimavida@gmail.com';
 const contactHref =
   'mailto:proyectoreanimavida@gmail.com?subject=Formaci%C3%B3n%20en%20emergencias%20para%20mi%20empresa&body=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20formaci%C3%B3n.';
 const appHref = 'https://dgutim.github.io/proyectoreanimavida/';
+const aespHref = 'https://aesp-rcp.es/';
+const aespGuidesHref = 'https://aesp-rcp.es/index.php/guias2025/guias-erc-2025-en-castellano/';
+const blsGuidelineHref =
+  'https://aesp-rcp.es/Documentos_web_AESP/Guias_ERC_2025/ERC_Guidelines_BLS_2025%20ESP.pdf';
+const firstAidGuidelineHref =
+  'https://aesp-rcp.es/Documentos_web_AESP/Guias_ERC_2025/ERC%20Guidelines%202025%20First%20Aid%20ESP.pdf';
+
+const sectionLinks = [
+  ['01', 'Inicio', '#inicio'],
+  ['02', 'Programas', '#programas'],
+  ['03', 'Metodología', '#metodologia'],
+  ['04', 'Cronograma', '#cronograma'],
+  ['05', 'AESP y guías', '#recursos'],
+  ['06', 'Contacto', '#contacto'],
+];
 
 const blsSchedule = [
   ['00:00–00:20', 'Reconocer y activar', 'Seguridad, respuesta, respiración anormal, 112 y petición del DEA.'],
@@ -65,6 +80,20 @@ function Logo({ className = '' }: { className?: string }) {
   );
 }
 
+function SectionNavigation() {
+  return (
+    <nav className="section-rail" aria-label="Accesos directos a la página">
+      <span className="section-rail-title">Ir a</span>
+      {sectionLinks.map(([number, label, href]) => (
+        <a className={href === '#contacto' ? 'section-rail-contact' : ''} href={href} key={href}>
+          <span>{number}</span>
+          <strong>{label}</strong>
+        </a>
+      ))}
+    </nav>
+  );
+}
+
 export default function Home() {
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -89,38 +118,42 @@ export default function Home() {
             Proyecto <strong>Reanima+ Vida</strong>
           </span>
         </a>
-        <nav aria-label="Navegación principal">
-          <a href="#programas">Programas</a>
-          <a href="#cronograma">Cronograma</a>
-          <a href="#metodologia">Metodología</a>
-          <a href="#fundae">FUNDAE</a>
-        </nav>
         <a className="button button-small" href={contactHref}>
-          Solicitar información
+          Solicitar una propuesta
         </a>
       </header>
+
+      <SectionNavigation />
 
       <section className="hero" id="inicio">
         <div className="hero-backdrop" aria-hidden="true" />
         <div className="hero-content shell">
           <div className="hero-copy">
+            <div className="hero-accreditation">
+              <span className="hero-accreditation-tag" aria-hidden="true">ERC</span>
+              <span>
+                <strong>Incluye curso BLS acreditado por el ERC</strong>
+                <small>La acreditación corresponde al bloque de 4 h de SVB y DEA</small>
+              </span>
+            </div>
             <p className="eyebrow">Formación práctica para empresas</p>
             <h1>
-              Cuando cada segundo cuenta,
-              <span> tu equipo sabe qué hacer.</span>
+              Respuesta inmediata ante emergencias.
+              <span> Preparación que se nota.</span>
             </h1>
             <p className="hero-lead">
-              Curso de Soporte Vital Básico (BLS) y uso del desfibrilador externo
-              automático, con acreditación oficial del Consejo Europeo de
-              Resucitación (ERC). Puede añadirse un módulo empresarial independiente
-              de Primeros Auxilios, con práctica realista y evaluación.
+              Nuestro programa integral combina el curso oficial de Soporte Vital
+              Básico (BLS) y uso del desfibrilador externo automático (DEA), con
+              acreditación del Consejo Europeo de Resucitación (ERC), y un módulo
+              empresarial independiente de Primeros Auxilios. Seis horas de práctica,
+              escenarios realistas y decisiones que el equipo podrá aplicar.
             </p>
             <div className="hero-actions">
-              <a className="button" href={contactHref}>
-                Diseñar una formación <ArrowIcon />
+              <a className="button" href="#programas">
+                Conocer el programa integral <ArrowIcon />
               </a>
-              <a className="text-link" href="#programas">
-                Ver los programas
+              <a className="text-link" href="#cronograma">
+                Ver qué se aprende
               </a>
             </div>
             <ul className="proof-list" aria-label="Características principales">
@@ -143,8 +176,8 @@ export default function Home() {
               <div><strong>Aprendizaje práctico</strong><small>Demostrar · practicar · evaluar</small></div>
             </div>
             <div className="hero-card hero-card-bottom">
-              <strong>4 h</strong>
-              <span>Itinerario presencial oficial ERC de SVB y DEA</span>
+              <strong>6 h</strong>
+              <span>Programa integral: SVB/DEA ERC + Primeros Auxilios</span>
             </div>
           </div>
         </div>
@@ -152,8 +185,8 @@ export default function Home() {
 
       <section className="quick-facts" aria-label="Datos esenciales">
         <div className="shell fact-grid">
-          <div><strong>4 h</strong><span>SVB y DEA · ERC</span></div>
           <div><strong>6 h</strong><span>SVB ERC + Primeros Auxilios</span></div>
+          <div><strong>4 h</strong><span>SVB y DEA · ERC</span></div>
           <div><strong>≤ 8</strong><span>participantes por instructor</span></div>
           <div><strong>In company</strong><span>en vuestro centro de trabajo</span></div>
         </div>
@@ -161,18 +194,39 @@ export default function Home() {
 
       <section className="programs shell" id="programas">
         <div className="section-intro">
-          <p className="eyebrow">Dos configuraciones, una misma prioridad</p>
-          <h2>Formación que convierte el protocolo en capacidad de respuesta</h2>
+          <p className="eyebrow">Una propuesta integral y una opción esencial</p>
+          <h2>Mucho más que aprender a hacer una RCP</h2>
           <p>
-            Elegimos el alcance según las necesidades del centro: curso oficial de
-            SVB/DEA o una preparación más amplia para las principales emergencias
-            que pueden producirse en el trabajo.
+            Recomendamos preparar al equipo para la parada cardiaca y también para
+            las emergencias que aparecen con más frecuencia en el trabajo. Cuando
+            el alcance de la empresa sea más concreto, puede contratarse únicamente
+            el curso oficial de SVB y DEA.
           </p>
         </div>
         <div className="program-grid">
+          <article className="program-card erc-card featured-card" id="programa-integral">
+            <div className="program-brand-row">
+              <span className="card-label">Programa recomendado</span>
+              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="316" height="155" />
+            </div>
+            <h3>Respuesta Inmediata ante Emergencias</h3>
+            <p className="duration"><strong>6 horas</strong><span>4 h SVB/DEA ERC + 2 h Primeros Auxilios</span></p>
+            <p>
+              El itinerario oficial de SVB y DEA, más un módulo empresarial de
+              Primeros Auxilios y escenarios adaptados al entorno de trabajo.
+            </p>
+            <ul className="mini-list">
+              <li><CheckIcon /> RCP de calidad, DEA Trainer y coordinación del equipo</li>
+              <li><CheckIcon /> Atragantamiento, hemorragia grave, quemaduras y anafilaxia</li>
+              <li><CheckIcon /> Convulsiones, ictus, dolor torácico y escenarios prácticos</li>
+              <li><CheckIcon /> Certificado oficial ERC BLS y documentación separada del módulo empresarial</li>
+            </ul>
+            <a className="card-link" href="#cronograma">Ver el cronograma completo <ArrowIcon /></a>
+          </article>
+
           <article className="program-card essential-card">
             <div className="program-brand-row">
-              <span className="card-label">Curso oficial ERC</span>
+              <span className="card-label">Curso esencial</span>
               <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="316" height="155" />
             </div>
             <h3>Basic Life Support Provider · SVB y DEA</h3>
@@ -182,27 +236,11 @@ export default function Home() {
               acreditado por el Consejo Europeo de Resucitación (ERC).
             </p>
             <ul className="mini-list">
+              <li><CheckIcon /> Reconocimiento, alerta al 112 y cadena de supervivencia</li>
               <li><CheckIcon /> RCP de calidad y trabajo en pareja</li>
-              <li><CheckIcon /> DEA Trainer y escenarios integrados</li>
-              <li><CheckIcon /> Evaluación y certificado oficial ERC BLS</li>
+              <li><CheckIcon /> DEA Trainer, escenarios, evaluación y certificado ERC BLS</li>
             </ul>
-            <a className="card-link" href={contactHref}>Solicitar propuesta <ArrowIcon /></a>
-          </article>
-
-          <article className="program-card erc-card">
-            <span className="card-label">Programa integral para empresas</span>
-            <h3>Respuesta Inmediata ante Emergencias</h3>
-            <p className="duration"><strong>6 horas</strong><span>4 h SVB/ERC + 2 h Primeros Auxilios</span></p>
-            <p>
-              Todo el itinerario oficial de SVB y DEA, más un módulo empresarial
-              de Primeros Auxilios y escenarios adaptados al entorno de trabajo.
-            </p>
-            <ul className="mini-list">
-              <li><CheckIcon /> Atragantamiento y hemorragia grave</li>
-              <li><CheckIcon /> Quemaduras, anafilaxia, convulsiones e ictus</li>
-              <li><CheckIcon /> Certificado oficial ERC BLS + documento separado del módulo empresarial de Primeros Auxilios</li>
-            </ul>
-            <a className="card-link" href={contactHref}>Diseñar el programa <ArrowIcon /></a>
+            <a className="card-link" href="#cronograma">Ver el itinerario de SVB <ArrowIcon /></a>
           </article>
         </div>
         <p className="cert-note">
@@ -328,6 +366,84 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="resources-section" id="recursos">
+        <div className="shell resources-grid">
+          <article className="aesp-panel">
+            <div className="aesp-logo-wrap">
+              <img
+                src="/logo-aesp-rcp.png"
+                alt="AESP-RCP"
+                width="620"
+                height="548"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="eyebrow">Conexión con el ecosistema nacional de RCP</p>
+              <h2>En contacto con AESP‑RCP</h2>
+              <p>
+                Mantenemos contacto profesional directo con la Asociación Española
+                para la Promoción de la RCP (AESP‑RCP), el Consejo Nacional que
+                representa al European Resuscitation Council en España.
+              </p>
+              <a className="resource-text-link" href={aespHref} target="_blank" rel="noreferrer">
+                Conocer AESP‑RCP <ArrowIcon />
+              </a>
+              <p className="relationship-note">
+                Esta mención describe un contacto profesional y no implica convenio,
+                patrocinio ni aval institucional.
+              </p>
+            </div>
+          </article>
+
+          <article className="guides-panel">
+            <span className="card-kicker">Recursos abiertos</span>
+            <h2>Guías ERC 2025 en castellano</h2>
+            <p>
+              Consulta las recomendaciones oficiales traducidas y publicadas por
+              AESP‑RCP. Los documentos se abren en su fuente original y son de acceso
+              gratuito.
+            </p>
+            <div className="guide-links">
+              <a href={blsGuidelineHref} target="_blank" rel="noreferrer">
+                <span><small>Guía oficial 2025</small><strong>Soporte Vital Básico</strong></span>
+                <ArrowIcon />
+              </a>
+              <a href={firstAidGuidelineHref} target="_blank" rel="noreferrer">
+                <span><small>Guía oficial 2025</small><strong>Primeros Auxilios</strong></span>
+                <ArrowIcon />
+              </a>
+            </div>
+            <a className="all-guides-link" href={aespGuidesHref} target="_blank" rel="noreferrer">
+              Ver todas las Guías ERC 2025 en castellano
+            </a>
+          </article>
+
+          <article className="continuity-panel">
+            <div className="continuity-copy">
+              <p className="eyebrow">Después del curso</p>
+              <h2>Material para mantener la respuesta visible en el centro</h2>
+              <p>
+                Podemos complementar cada edición con recursos de consulta adaptados
+                al entorno y revisados antes de su entrega.
+              </p>
+            </div>
+            <div className="continuity-items">
+              <div>
+                <span>01</span>
+                <strong>Manual digital de repaso</strong>
+                <small>Secuencia SVB/DEA, atragantamiento y recordatorios esenciales.</small>
+              </div>
+              <div>
+                <span>02</span>
+                <strong>Cartel para el espacio cardioprotegido</strong>
+                <small>Algoritmo visual para colocar junto al desfibrilador del centro.</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="app-section">
         <div className="shell app-panel">
           <div className="app-copy">
@@ -384,14 +500,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta">
+      <section className="final-cta" id="contacto">
         <div className="shell final-cta-inner">
           <Logo className="cta-logo" />
           <div>
             <p className="eyebrow">Hablemos de vuestro equipo</p>
             <h2>Diseñamos la formación alrededor de la empresa, no al revés.</h2>
           </div>
-          <a className="button" href={contactHref}><MailIcon /> Solicitar información</a>
+          <a className="button" href={contactHref}><MailIcon /> Solicitar una propuesta</a>
         </div>
       </section>
 
@@ -406,7 +522,6 @@ export default function Home() {
         </div>
       </footer>
 
-      <a className="mobile-contact" href={contactHref}><MailIcon /> Pedir información</a>
     </main>
   );
 }
