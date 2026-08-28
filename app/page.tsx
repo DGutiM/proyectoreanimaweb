@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import MobileMenu from './mobile-menu';
+
 const email = 'proyectoreanimavida@gmail.com';
 const contactHref =
   'mailto:proyectoreanimavida@gmail.com?subject=Formaci%C3%B3n%20en%20emergencias%20para%20mi%20empresa&body=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20formaci%C3%B3n.';
@@ -10,15 +12,6 @@ const blsGuidelineHref =
   'https://aesp-rcp.es/Documentos_web_AESP/Guias_ERC_2025/ERC_Guidelines_BLS_2025%20ESP.pdf';
 const firstAidGuidelineHref =
   'https://aesp-rcp.es/Documentos_web_AESP/Guias_ERC_2025/ERC%20Guidelines%202025%20First%20Aid%20ESP.pdf';
-
-const sectionLinks = [
-  ['01', 'Inicio', '#inicio'],
-  ['02', 'Programas', '#programas'],
-  ['03', 'Metodología', '#metodologia'],
-  ['04', 'Cronograma', '#cronograma'],
-  ['05', 'AESP y guías', '#recursos'],
-  ['06', 'Contacto', '#contacto'],
-];
 
 const blsSchedule = [
   ['00:00–00:20', 'Reconocer y activar', 'Seguridad, respuesta, respiración anormal, 112 y petición del DEA.'],
@@ -80,20 +73,6 @@ function Logo({ className = '' }: { className?: string }) {
   );
 }
 
-function SectionNavigation() {
-  return (
-    <nav className="section-rail" aria-label="Accesos directos a la página">
-      <span className="section-rail-title">Ir a</span>
-      {sectionLinks.map(([number, label, href]) => (
-        <a className={href === '#contacto' ? 'section-rail-contact' : ''} href={href} key={href}>
-          <span>{number}</span>
-          <strong>{label}</strong>
-        </a>
-      ))}
-    </nav>
-  );
-}
-
 export default function Home() {
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -118,12 +97,18 @@ export default function Home() {
             Proyecto <strong>Reanima+ Vida</strong>
           </span>
         </a>
+        <nav className="desktop-navigation" aria-label="Navegación principal">
+          <a href="#programas">Programas</a>
+          <a href="#metodologia">Metodología</a>
+          <a href="#cronograma">Cronograma</a>
+          <a href="#recursos">Recursos</a>
+        </nav>
         <a className="button button-small" href={contactHref}>
           Solicitar una propuesta
         </a>
       </header>
 
-      <SectionNavigation />
+      <MobileMenu contactHref={contactHref} />
 
       <section className="hero" id="inicio">
         <div className="hero-backdrop" aria-hidden="true" />
@@ -280,7 +265,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="outcomes shell">
+      <section className="outcomes shell" id="resultados">
         <div className="center-intro">
           <p className="eyebrow">Qué cambia después del curso</p>
           <h2>Un equipo más preparado para los minutos que importan</h2>
@@ -444,7 +429,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="app-section">
+      <section className="app-section" id="app">
         <div className="shell app-panel">
           <div className="app-copy">
             <p className="eyebrow">La formación continúa</p>
@@ -475,7 +460,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq shell">
+      <section className="faq shell" id="preguntas">
         <div className="faq-heading">
           <p className="eyebrow">Preguntas frecuentes</p>
           <h2>Lo esencial antes de organizar una edición</h2>

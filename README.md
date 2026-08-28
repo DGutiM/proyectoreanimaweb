@@ -2,10 +2,16 @@
 
 Web corporativa de formación práctica en respuesta ante emergencias para empresas.
 
+## Web pública
+
+### [Abrir la web de Proyecto Reanima+ Vida →](https://proyecto-reanima-vida-empresas.dgutim.chatgpt.site/)
+
+[![Vista previa de la web de Proyecto Reanima+ Vida](public/og-reanima.png)](https://proyecto-reanima-vida-empresas.dgutim.chatgpt.site/)
+
 Presenta dos programas:
 
-- Curso oficial ERC de Soporte Vital Básico y uso del DEA, con 4 horas presenciales.
 - Programa integral con el curso oficial ERC y un módulo empresarial independiente de Primeros Auxilios, con 6 horas presenciales en total.
+- Curso oficial ERC de Soporte Vital Básico y uso del DEA, con 4 horas presenciales.
 
 La web incluye metodología, contenidos, cronogramas, encaje preventivo, información prudente sobre FUNDAE y acceso a la aplicación educativa de reanimación de Proyecto Reanima+ Vida.
 
@@ -28,6 +34,12 @@ pnpm dev
 ```
 
 Después se abre `http://localhost:3000/` en el navegador. No se visualiza haciendo doble clic en un archivo, porque necesita el servidor de desarrollo.
+
+## Publicación y dominio
+
+GitHub conserva el código fuente y muestra este README como portada del repositorio. La web pública se ejecuta en su alojamiento propio mediante el enlace anterior.
+
+Cuando se adquiera un dominio, incluido uno registrado en Namecheap, podrá conectarse a este mismo alojamiento mediante sus registros DNS. No será necesario rehacer la web ni convertirla en un único archivo HTML.
 
 ## PWA
 

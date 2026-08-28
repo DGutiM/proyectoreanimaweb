@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import PwaRegister from './pwa-register';
 
+const siteUrl = 'https://proyecto-reanima-vida-empresas.dgutim.chatgpt.site';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -14,11 +16,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   applicationName: 'Reanima+ Vida',
   title: 'Formación en emergencias para empresas | Proyecto Reanima+ Vida',
   description:
     'Curso oficial ERC de Soporte Vital Básico y DEA, con un módulo empresarial independiente de Primeros Auxilios.',
   manifest: '/manifest.webmanifest',
+  alternates: {
+    canonical: '/',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
@@ -41,14 +47,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
+    url: siteUrl,
     locale: 'es_ES',
     siteName: 'Proyecto Reanima+ Vida',
-    title: 'Formación en emergencias para empresas',
+    title: 'Proyecto Reanima+ Vida | Formación en emergencias para empresas',
     description:
       'Curso oficial ERC de SVB y DEA, con práctica realista y un módulo empresarial de Primeros Auxilios.',
     images: [
       {
-        url: '/og-reanima.png',
+        url: `${siteUrl}/og-reanima.png`,
         width: 1731,
         height: 908,
         alt: 'Formación práctica en reanimación y uso del DEA para empresas',
@@ -57,10 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Formación en emergencias para empresas',
+    title: 'Proyecto Reanima+ Vida | Formación en emergencias para empresas',
     description:
       'Curso oficial ERC de SVB y DEA, con práctica realista y un módulo empresarial de Primeros Auxilios.',
-    images: ['/og-reanima.png'],
+    images: [`${siteUrl}/og-reanima.png`],
   },
 };
 

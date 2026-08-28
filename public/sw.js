@@ -1,4 +1,4 @@
-const CACHE_NAME = 'reanima-empresas-v1';
+const CACHE_NAME = 'reanima-empresas-v2';
 const APP_SHELL = [
   '/',
   '/manifest.webmanifest',
