@@ -11,6 +11,7 @@ const sectionLinks = [
   ['Contenido', '#cronograma'],
   ['PRL y FUNDAE', '#fundae'],
   ['Guías ERC y AESP-RCP', '#recursos'],
+  ['Asistente RCP', '#app'],
   ['Preguntas', '#preguntas'],
 ];
 
@@ -32,10 +33,8 @@ function CloseIcon() {
 
 export default function MobileMenu({
   contactHref,
-  appHref,
 }: {
   contactHref: string;
-  appHref: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -85,21 +84,16 @@ export default function MobileMenu({
           <p className="mobile-menu-kicker">Explorar la página</p>
           <nav aria-label="Secciones de la página">
             {sectionLinks.map(([label, href], index) => (
-              <a href={href} onClick={closeMenu} key={href}>
+              <a
+                className={href === '#app' ? 'mobile-menu-app-link' : undefined}
+                href={href}
+                onClick={closeMenu}
+                key={href}
+              >
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{label}</strong>
               </a>
             ))}
-            <a
-              className="mobile-menu-app-link"
-              href={appHref}
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMenu}
-            >
-              <span>{String(sectionLinks.length + 1).padStart(2, '0')}</span>
-              <strong>Asistente RCP</strong>
-            </a>
           </nav>
 
           <a className="mobile-menu-contact" href={contactHref} onClick={closeMenu}>

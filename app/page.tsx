@@ -82,7 +82,7 @@ export default function Home() {
       />
 
       <header className="site-header">
-        <MobileMenu contactHref={contactHref} appHref={appHref} />
+        <MobileMenu contactHref={contactHref} />
         <a className="brand" href="#inicio" aria-label="Proyecto Reanima más Vida">
           <Logo />
           <span>
@@ -94,9 +94,7 @@ export default function Home() {
           <a href="#metodologia">Cómo formamos</a>
           <a href="#cronograma">Contenido</a>
           <a href="#recursos">Guías ERC</a>
-          <a className="desktop-app-link" href={appHref} target="_blank" rel="noreferrer">
-            Asistente RCP <span aria-hidden="true">↗</span>
-          </a>
+          <a className="desktop-app-link" href="#app">Asistente RCP</a>
         </nav>
         <a className="button button-small" href={contactHref}>
           Solicitar una propuesta
@@ -170,8 +168,8 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="programs shell" id="programas">
-        <div className="section-intro">
+      <section className="programs shell">
+        <div className="section-intro menu-anchor" id="programas">
           <p className="eyebrow">Una propuesta integral y una opción esencial</p>
           <h2>Mucho más que aprender a hacer una RCP</h2>
           <p>
@@ -233,7 +231,7 @@ export default function Home() {
         </nav>
       </section>
 
-      <section className="experience" id="metodologia">
+      <section className="experience">
         <div className="experience-grid shell">
           <div className="experience-media">
             <img
@@ -245,7 +243,7 @@ export default function Home() {
             />
             <div className="media-badge"><strong>Práctica real</strong><span>sin improvisar el día de la emergencia</span></div>
           </div>
-          <div className="experience-copy">
+          <div className="experience-copy menu-anchor" id="metodologia">
             <p className="eyebrow">Una metodología para recordar y actuar</p>
             <h2>Menos diapositivas. Más manos, decisiones y escenarios.</h2>
             <p>
@@ -279,9 +277,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="schedule-section" id="cronograma">
+      <section className="schedule-section">
         <div className="shell">
-          <div className="schedule-heading">
+          <div className="schedule-heading menu-anchor" id="cronograma">
             <div>
               <p className="eyebrow">Contenido visible desde el principio</p>
               <h2>Un cronograma claro, práctico y medible</h2>
@@ -318,8 +316,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="prevention" id="fundae">
-        <div className="shell prevention-grid">
+      <section className="prevention">
+        <div className="shell prevention-grid menu-anchor" id="fundae">
           <article className="prevention-card prl-card">
             <span className="card-kicker">Prevención y emergencias</span>
             <h2>Una formación útil dentro del sistema preventivo de la empresa</h2>
@@ -349,8 +347,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="resources-section" id="recursos">
-        <div className="shell resources-grid">
+      <section className="resources-section">
+        <div className="shell resources-grid menu-anchor" id="recursos">
           <article className="guides-panel">
             <span className="card-kicker">Guías oficiales · acceso gratuito</span>
             <h2>Guías ERC 2025 en castellano</h2>
@@ -400,8 +398,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="app-section" id="app">
-        <div className="shell app-panel">
+      <section className="app-section">
+        <div className="shell app-panel menu-anchor" id="app">
           <div className="app-copy">
             <p className="eyebrow">La formación continúa</p>
             <h2>Asistente RCP para repasar la secuencia de actuación</h2>
@@ -431,8 +429,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq shell" id="preguntas">
-        <div className="faq-heading">
+      <section className="faq shell">
+        <div className="faq-heading menu-anchor" id="preguntas">
           <p className="eyebrow">Preguntas frecuentes</p>
           <h2>Lo esencial antes de organizar una edición</h2>
         </div>
@@ -456,8 +454,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta" id="contacto">
-        <div className="shell contact-layout">
+      <section className="final-cta">
+        <div className="shell contact-layout menu-anchor" id="contacto">
           <div className="contact-copy">
             <Logo className="cta-logo" />
             <p className="eyebrow">Hablemos de vuestro equipo</p>

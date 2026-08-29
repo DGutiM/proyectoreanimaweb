@@ -384,15 +384,9 @@ footer { padding-block: 48px 100px; background: #fff; }
   background: #fff;
   padding: 7px 9px;
 }
+.menu-anchor,
 #programa-integral,
-#metodologia,
-#resultados,
-#cronograma,
-#fundae,
-#recursos,
-#app,
-#preguntas,
-#contacto {
+#resultados {
   scroll-margin-top: 0;
 }
 
@@ -1080,15 +1074,9 @@ footer { padding-block: 38px 56px; }
 
 @media (max-width: 1000px) {
   html { scroll-padding-top: 78px; }
+  .menu-anchor { scroll-margin-top: 12px; }
   #programa-integral,
-  #metodologia,
-  #resultados,
-  #cronograma,
-  #fundae,
-  #recursos,
-  #app,
-  #preguntas,
-  #contacto { scroll-margin-top: 0; }
+  #resultados { scroll-margin-top: 0; }
 
   .site-header {
     position: fixed;
@@ -1170,6 +1158,7 @@ footer { padding-block: 38px 56px; }
   .section-intro .eyebrow { margin-bottom: 0; }
   .program-card { min-height: auto; }
   .experience-grid { gap: 42px; }
+  .experience-copy { order: -1; }
   .prevention-card { min-height: auto; }
   .contact-layout { grid-template-columns: 1fr; }
   .contact-copy { max-width: 700px; }
@@ -1212,7 +1201,7 @@ footer { padding-block: 38px 56px; }
   .schedule-heading h2,
   .app-copy h2,
   .faq-heading h2 { font-size: 34px; line-height: 1.06; }
-  .section-intro { margin-bottom: 30px; }
+  .section-intro { margin-bottom: 22px; }
   .program-card { padding: 27px; }
   .program-card h3 { font-size: 26px; }
   .duration { flex-direction: column; gap: 2px; }
@@ -1224,7 +1213,7 @@ footer { padding-block: 38px 56px; }
   .benefit-card h3 { margin-top: 25px; }
 
   .schedule-section { padding-block: 58px; }
-  .schedule-heading { margin-bottom: 26px; }
+  .schedule-heading { margin-bottom: 22px; }
   .schedule-grid { grid-template-columns: 1fr; }
   .schedule-card header { min-height: 96px; padding: 20px; }
   .schedule-card header h3 { font-size: 20px; }
@@ -1244,7 +1233,7 @@ footer { padding-block: 38px 56px; }
   .app-panel { gap: 44px; padding: 42px 27px; }
   .phone { width: min(250px, 100%); }
   .phone-screen { min-height: 425px; }
-  .faq { gap: 28px; }
+  .faq { gap: 22px; }
 
   .final-cta { padding-block: 48px; }
   .contact-layout { gap: 30px; border-radius: 25px; padding: 27px; }
@@ -1322,7 +1311,7 @@ footer { padding-block: 38px 56px; }
   }
   .mobile-menu-dialog nav a.mobile-menu-app-link::after {
     color: var(--aqua-dark);
-    content: '↗';
+    content: '↓';
     font-size: 16px;
   }
 }
