@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 import MobileMenu from './mobile-menu';
+import ContactForm from './contact-form';
 
 const email = 'proyectoreanimavida@gmail.com';
-const contactHref =
-  'mailto:proyectoreanimavida@gmail.com?subject=Formaci%C3%B3n%20en%20emergencias%20para%20mi%20empresa&body=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20programas%20de%20formaci%C3%B3n.';
+const contactHref = '#contacto';
 const appHref = 'https://dgutim.github.io/proyectoreanimavida/';
 const aespHref = 'https://aesp-rcp.es/';
 const aespGuidesHref = 'https://aesp-rcp.es/index.php/guias2025/guias-erc-2025-en-castellano/';
@@ -56,15 +56,6 @@ function CheckIcon() {
   );
 }
 
-function MailIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m4 7 8 6 8-6" />
-    </svg>
-  );
-}
-
 function Logo({ className = '' }: { className?: string }) {
   return (
     <span className={`brand-mark ${className}`}>
@@ -91,6 +82,7 @@ export default function Home() {
       />
 
       <header className="site-header">
+        <MobileMenu contactHref={contactHref} />
         <a className="brand" href="#inicio" aria-label="Proyecto Reanima más Vida">
           <Logo />
           <span>
@@ -98,29 +90,21 @@ export default function Home() {
           </span>
         </a>
         <nav className="desktop-navigation" aria-label="Navegación principal">
-          <a href="#programas">Programas</a>
-          <a href="#metodologia">Metodología</a>
-          <a href="#cronograma">Cronograma</a>
+          <a href="#programas">Programa</a>
+          <a href="#metodologia">Cómo formamos</a>
+          <a href="#cronograma">Contenido</a>
           <a href="#recursos">Recursos</a>
+          <a href="#preguntas">Preguntas</a>
         </nav>
         <a className="button button-small" href={contactHref}>
           Solicitar una propuesta
         </a>
       </header>
 
-      <MobileMenu contactHref={contactHref} />
-
       <section className="hero" id="inicio">
         <div className="hero-backdrop" aria-hidden="true" />
         <div className="hero-content shell">
           <div className="hero-copy">
-            <div className="hero-accreditation">
-              <span className="hero-accreditation-tag" aria-hidden="true">ERC</span>
-              <span>
-                <strong>Incluye curso BLS acreditado por el ERC</strong>
-                <small>La acreditación corresponde al bloque de 4 h de SVB y DEA</small>
-              </span>
-            </div>
             <p className="eyebrow">Formación práctica para empresas</p>
             <h1>
               Respuesta inmediata ante emergencias.
@@ -156,14 +140,6 @@ export default function Home() {
               loading="eager"
               fetchPriority="high"
             />
-            <div className="hero-card hero-card-top">
-              <span className="pulse-dot" />
-              <div><strong>Aprendizaje práctico</strong><small>Demostrar · practicar · evaluar</small></div>
-            </div>
-            <div className="hero-card hero-card-bottom">
-              <strong>6 h</strong>
-              <span>Programa integral: SVB/DEA ERC + Primeros Auxilios</span>
-            </div>
           </div>
         </div>
       </section>
@@ -486,13 +462,19 @@ export default function Home() {
       </section>
 
       <section className="final-cta" id="contacto">
-        <div className="shell final-cta-inner">
-          <Logo className="cta-logo" />
-          <div>
+        <div className="shell contact-layout">
+          <div className="contact-copy">
+            <Logo className="cta-logo" />
             <p className="eyebrow">Hablemos de vuestro equipo</p>
             <h2>Diseñamos la formación alrededor de la empresa, no al revés.</h2>
+            <p className="contact-intro">
+              Cuéntanos cuántas personas queréis formar y cómo se organiza vuestro
+              centro. Prepararemos una propuesta adaptada, sin publicar tarifas
+              cerradas ni obligaros a elegir antes de hablar.
+            </p>
+            <a className="contact-email" href={`mailto:${email}`}>{email}</a>
           </div>
-          <a className="button" href={contactHref}><MailIcon /> Solicitar una propuesta</a>
+          <ContactForm />
         </div>
       </section>
 
