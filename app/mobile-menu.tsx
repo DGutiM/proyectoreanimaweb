@@ -4,7 +4,7 @@
 
 import { useRef } from 'react';
 
-const mobileLinks = [
+const sectionLinks = [
   ['Inicio', '#inicio'],
   ['Programa', '#programas'],
   ['Cómo formamos', '#metodologia'],
@@ -30,7 +30,13 @@ function CloseIcon() {
   );
 }
 
-export default function MobileMenu({ contactHref }: { contactHref: string }) {
+export default function MobileMenu({
+  contactHref,
+  appHref,
+}: {
+  contactHref: string;
+  appHref: string;
+}) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -78,12 +84,22 @@ export default function MobileMenu({ contactHref }: { contactHref: string }) {
 
           <p className="mobile-menu-kicker">Explorar la página</p>
           <nav aria-label="Secciones de la página">
-            {mobileLinks.map(([label, href], index) => (
+            {sectionLinks.map(([label, href], index) => (
               <a href={href} onClick={closeMenu} key={href}>
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{label}</strong>
               </a>
             ))}
+            <a
+              className="mobile-menu-app-link"
+              href={appHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+            >
+              <span>{String(sectionLinks.length + 1).padStart(2, '0')}</span>
+              <strong>Asistente RCP</strong>
+            </a>
           </nav>
 
           <a className="mobile-menu-contact" href={contactHref} onClick={closeMenu}>

@@ -82,7 +82,7 @@ export default function Home() {
       />
 
       <header className="site-header">
-        <MobileMenu contactHref={contactHref} />
+        <MobileMenu contactHref={contactHref} appHref={appHref} />
         <a className="brand" href="#inicio" aria-label="Proyecto Reanima más Vida">
           <Logo />
           <span>
@@ -94,7 +94,9 @@ export default function Home() {
           <a href="#metodologia">Cómo formamos</a>
           <a href="#cronograma">Contenido</a>
           <a href="#recursos">Guías ERC</a>
-          <a href="#preguntas">Preguntas</a>
+          <a className="desktop-app-link" href={appHref} target="_blank" rel="noreferrer">
+            Asistente RCP <span aria-hidden="true">↗</span>
+          </a>
         </nav>
         <a className="button button-small" href={contactHref}>
           Solicitar una propuesta
@@ -402,13 +404,13 @@ export default function Home() {
         <div className="shell app-panel">
           <div className="app-copy">
             <p className="eyebrow">La formación continúa</p>
-            <h2>Una herramienta digital para repasar la secuencia de actuación</h2>
+            <h2>Asistente RCP para repasar la secuencia de actuación</h2>
             <p>
               Nuestra aplicación de reanimación permite familiarizarse con los pasos
               esenciales y mantener el algoritmo presente después del curso.
             </p>
             <a className="button button-light" href={appHref} target="_blank" rel="noreferrer">
-              Abrir la app de reanimación <ArrowIcon />
+              Abrir Asistente RCP <ArrowIcon />
             </a>
             <p className="safety-note">
               Herramienta educativa complementaria. Ante una emergencia real, llama al
