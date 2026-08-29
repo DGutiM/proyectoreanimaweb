@@ -17,7 +17,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 18px; }
+html { scroll-behavior: smooth; scroll-padding-top: 0; }
 body {
   margin: 0;
   overflow-x: hidden;
@@ -393,7 +393,7 @@ footer { padding-block: 48px 100px; background: #fff; }
 #app,
 #preguntas,
 #contacto {
-  scroll-margin-top: 24px;
+  scroll-margin-top: 0;
 }
 
 .resources-section {
@@ -1266,4 +1266,136 @@ footer { padding-block: 38px 56px; }
   .hero h1 { font-size: 38px; }
   .schedule-card li { grid-template-columns: 1fr; gap: 6px; }
   .contact-layout { width: calc(100% - 24px); }
+}
+
+/* Recursos prioritarios, navegación compacta y transparencia */
+.guides-panel {
+  position: relative;
+  border: 1px solid rgb(128 214 209 / 24%);
+  box-shadow: 0 28px 72px rgb(7 27 36 / 18%);
+}
+.guides-panel::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), #ff8c83 42%, #80d6d1);
+  content: '';
+}
+.guides-panel .card-kicker {
+  border-bottom-color: #80d6d1;
+  color: #9ae8e2;
+}
+.guide-links a {
+  border-color: rgb(128 214 209 / 24%);
+  background: rgb(255 255 255 / 9%);
+  box-shadow: inset 3px 0 0 #80d6d1;
+}
+.guide-links strong { font-size: 16px; }
+.form-privacy {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+.form-privacy a {
+  color: var(--aqua-dark);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-legal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.footer-legal details {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0 16px;
+}
+.footer-legal summary {
+  position: relative;
+  padding: 14px 28px 14px 0;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 760;
+  list-style: none;
+}
+.footer-legal summary::-webkit-details-marker { display: none; }
+.footer-legal summary::after {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  color: var(--aqua);
+  content: '+';
+  font-size: 18px;
+  font-weight: 450;
+}
+.footer-legal details[open] summary::after { content: '−'; }
+.footer-legal p {
+  margin: 0 0 15px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.footer-legal p a { color: var(--aqua-dark); font-weight: 730; }
+.footer-copyright {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+
+@media (max-width: 1000px) {
+  html { scroll-padding-top: 68px; }
+  .mobile-menu-dialog { width: min(88vw, 340px); }
+  .mobile-menu-panel {
+    overflow-y: auto;
+    padding: 14px 18px max(16px, env(safe-area-inset-bottom));
+  }
+  .mobile-menu-heading {
+    gap: 12px;
+    padding-bottom: 11px;
+  }
+  .mobile-menu-heading > a { gap: 9px; font-size: 9px; }
+  .mobile-menu-heading strong { font-size: 12px; }
+  .mobile-menu-logo { width: 44px; height: 44px; }
+  .mobile-menu-heading button { width: 38px; height: 38px; }
+  .mobile-menu-kicker { display: none; }
+  .mobile-menu-dialog nav a {
+    min-height: 42px;
+    grid-template-columns: 30px 1fr;
+  }
+  .mobile-menu-dialog nav a > strong { font-size: 13px; }
+  .mobile-menu-contact {
+    min-height: 44px;
+    margin-top: 13px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .prevention { padding-bottom: 28px; }
+  .resources-section { padding-top: 28px; }
+  .resources-grid { gap: 16px; }
+  .guides-panel { order: -1; }
+  .aesp-panel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .aesp-logo-wrap {
+    width: 150px;
+    min-height: 150px;
+    justify-self: center;
+  }
+  .footer-legal { grid-template-columns: 1fr; margin-top: 22px; }
+  .footer-copyright { text-align: left; }
 }

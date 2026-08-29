@@ -81,6 +81,13 @@ export default function ContactForm() {
         </p>
       </div>
 
+      <p className="form-privacy">
+        Al pulsar «Preparar solicitud», los datos solo se usarán en este dispositivo
+        para crear el borrador: no se envían ni se guardan en esta web. No incluyas
+        datos de salud ni información confidencial. Consulta la{' '}
+        <a href="#privacidad">información de privacidad</a>.
+      </p>
+
       {prepared && (
         <p className="form-fallback" role="status">
           Si no se ha abierto el correo, escríbenos directamente a{' '}

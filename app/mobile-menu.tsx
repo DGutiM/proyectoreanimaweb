@@ -6,15 +6,12 @@ import { useRef } from 'react';
 
 const mobileLinks = [
   ['Inicio', '#inicio'],
-  ['Programas', '#programas'],
+  ['Programa', '#programas'],
   ['Cómo formamos', '#metodologia'],
-  ['Resultados', '#resultados'],
-  ['Cronograma', '#cronograma'],
+  ['Contenido', '#cronograma'],
   ['PRL y FUNDAE', '#fundae'],
-  ['AESP-RCP y guías', '#recursos'],
-  ['App de reanimación', '#app'],
-  ['Preguntas frecuentes', '#preguntas'],
-  ['Contacto', '#contacto'],
+  ['Guías ERC y AESP-RCP', '#recursos'],
+  ['Preguntas', '#preguntas'],
 ];
 
 function MenuIcon() {

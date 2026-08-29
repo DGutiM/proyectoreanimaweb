@@ -93,7 +93,7 @@ export default function Home() {
           <a href="#programas">Programa</a>
           <a href="#metodologia">Cómo formamos</a>
           <a href="#cronograma">Contenido</a>
-          <a href="#recursos">Recursos</a>
+          <a href="#recursos">Guías ERC</a>
           <a href="#preguntas">Preguntas</a>
         </nav>
         <a className="button button-small" href={contactHref}>
@@ -329,6 +329,29 @@ export default function Home() {
 
       <section className="resources-section" id="recursos">
         <div className="shell resources-grid">
+          <article className="guides-panel">
+            <span className="card-kicker">Guías oficiales · acceso gratuito</span>
+            <h2>Guías ERC 2025 en castellano</h2>
+            <p>
+              Acceso directo a las recomendaciones oficiales traducidas y publicadas
+              por AESP‑RCP. Son la referencia científica que sustenta nuestra
+              formación en Soporte Vital Básico y Primeros Auxilios.
+            </p>
+            <div className="guide-links">
+              <a href={blsGuidelineHref} target="_blank" rel="noreferrer">
+                <span><small>Guía oficial 2025</small><strong>Soporte Vital Básico</strong></span>
+                <ArrowIcon />
+              </a>
+              <a href={firstAidGuidelineHref} target="_blank" rel="noreferrer">
+                <span><small>Guía oficial 2025</small><strong>Primeros Auxilios</strong></span>
+                <ArrowIcon />
+              </a>
+            </div>
+            <a className="all-guides-link" href={aespGuidesHref} target="_blank" rel="noreferrer">
+              Ver todas las Guías ERC 2025 en castellano
+            </a>
+          </article>
+
           <article className="aesp-panel">
             <div className="aesp-logo-wrap">
               <img
@@ -354,52 +377,6 @@ export default function Home() {
                 Esta mención describe un contacto profesional y no implica convenio,
                 patrocinio ni aval institucional.
               </p>
-            </div>
-          </article>
-
-          <article className="guides-panel">
-            <span className="card-kicker">Recursos abiertos</span>
-            <h2>Guías ERC 2025 en castellano</h2>
-            <p>
-              Consulta las recomendaciones oficiales traducidas y publicadas por
-              AESP‑RCP. Los documentos se abren en su fuente original y son de acceso
-              gratuito.
-            </p>
-            <div className="guide-links">
-              <a href={blsGuidelineHref} target="_blank" rel="noreferrer">
-                <span><small>Guía oficial 2025</small><strong>Soporte Vital Básico</strong></span>
-                <ArrowIcon />
-              </a>
-              <a href={firstAidGuidelineHref} target="_blank" rel="noreferrer">
-                <span><small>Guía oficial 2025</small><strong>Primeros Auxilios</strong></span>
-                <ArrowIcon />
-              </a>
-            </div>
-            <a className="all-guides-link" href={aespGuidesHref} target="_blank" rel="noreferrer">
-              Ver todas las Guías ERC 2025 en castellano
-            </a>
-          </article>
-
-          <article className="continuity-panel">
-            <div className="continuity-copy">
-              <p className="eyebrow">Después del curso</p>
-              <h2>Material para mantener la respuesta visible en el centro</h2>
-              <p>
-                Podemos complementar cada edición con recursos de consulta adaptados
-                al entorno y revisados antes de su entrega.
-              </p>
-            </div>
-            <div className="continuity-items">
-              <div>
-                <span>01</span>
-                <strong>Manual digital de repaso</strong>
-                <small>Secuencia SVB/DEA, atragantamiento y recordatorios esenciales.</small>
-              </div>
-              <div>
-                <span>02</span>
-                <strong>Cartel para el espacio cardioprotegido</strong>
-                <small>Algoritmo visual para colocar junto al desfibrilador del centro.</small>
-              </div>
             </div>
           </article>
         </div>
@@ -486,6 +463,28 @@ export default function Home() {
           </a>
           <p>Formación práctica en respuesta ante emergencias para empresas.</p>
           <a className="footer-mail" href={`mailto:${email}`}>{email}</a>
+        </div>
+        <div className="shell footer-legal" id="privacidad">
+          <details>
+            <summary>Privacidad del contacto</summary>
+            <p>
+              Los datos escritos en el formulario no se almacenan ni se envían desde
+              esta web. Se incorporan a un borrador en la aplicación de correo del
+              visitante. Solo si decide enviarlo llegarán a nuestro correo y se usarán
+              para responder a la consulta y preparar la propuesta solicitada. Para
+              solicitar acceso, rectificación o supresión, puede escribir a{' '}
+              <a href={`mailto:${email}`}>{email}</a>.
+            </p>
+          </details>
+          <details>
+            <summary>Cookies y almacenamiento técnico</summary>
+            <p>
+              Esta web no utiliza cookies de analítica ni de publicidad. Puede guardar
+              en el dispositivo archivos técnicos de la aplicación web para acelerar
+              la carga y permitir su funcionamiento básico sin conexión.
+            </p>
+          </details>
+          <p className="footer-copyright">© 2026 Proyecto Reanima+ Vida</p>
         </div>
       </footer>
 
