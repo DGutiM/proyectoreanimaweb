@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import PwaRegister from './pwa-register';
-
-const siteUrl = 'https://proyecto-reanima-vida-empresas.dgutim.chatgpt.site';
+import PwaCleanup from './pwa-cleanup';
+import { siteUrl, socialImage } from './site-config';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,31 +17,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: 'Reanima+ Vida',
-  title: 'Formación en emergencias para empresas | Proyecto Reanima+ Vida',
+  title: {
+    default: 'Formación en emergencias para empresas | Proyecto Reanima+ Vida',
+    template: '%s | Proyecto Reanima+ Vida',
+  },
   description:
     'Curso oficial ERC de Soporte Vital Básico y DEA, con un módulo empresarial independiente de Primeros Auxilios.',
-  manifest: '/manifest.webmanifest',
   alternates: {
     canonical: '/',
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'Reanima+ Vida',
   },
   formatDetection: {
     telephone: false,
   },
-  other: {
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-title': 'Reanima+ Vida',
-    'mobile-web-app-capable': 'yes',
-  },
   icons: {
-    icon: [
-      { url: '/favicon.png', type: 'image/png' },
-      { url: '/pwa-192.png', sizes: '192x192', type: 'image/png' },
-    ],
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
@@ -55,7 +43,7 @@ export const metadata: Metadata = {
       'Curso oficial ERC de SVB y DEA, con práctica realista y un módulo empresarial de Primeros Auxilios.',
     images: [
       {
-        url: `${siteUrl}/og-reanima.png`,
+        url: socialImage,
         width: 1731,
         height: 908,
         alt: 'Formación práctica en reanimación y uso del DEA para empresas',
@@ -67,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Proyecto Reanima+ Vida | Formación en emergencias para empresas',
     description:
       'Curso oficial ERC de SVB y DEA, con práctica realista y un módulo empresarial de Primeros Auxilios.',
-    images: [`${siteUrl}/og-reanima.png`],
+    images: [socialImage],
   },
 };
 
@@ -86,7 +74,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PwaRegister />
+        <PwaCleanup />
         {children}
       </body>
     </html>

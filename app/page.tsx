@@ -2,8 +2,8 @@
 
 import MobileMenu from './mobile-menu';
 import ContactForm from './contact-form';
+import { contactEmail as email } from './site-config';
 
-const email = 'proyectoreanimavida@gmail.com';
 const contactHref = '#contacto';
 const appHref = 'https://dgutim.github.io/proyectoreanimavida/';
 const aespHref = 'https://aesp-rcp.es/';
@@ -153,6 +153,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="faculty-strip shell" aria-label="Experiencia del equipo docente">
+        <article>
+          <span>Experiencia clínica y docente</span>
+          <strong>Anestesiólogos con más de 10 años de experiencia</strong>
+        </article>
+        <article>
+          <span>Formación ERC</span>
+          <strong>Directores e instructores de SVA, SVI y SVB</strong>
+        </article>
+        <article>
+          <span>Comunidad nacional de RCP</span>
+          <strong>Formamos parte de AESP‑RCP</strong>
+        </article>
+      </section>
+
       <section className="programs shell" id="programas">
         <div className="section-intro">
           <p className="eyebrow">Una propuesta integral y una opción esencial</p>
@@ -182,7 +197,7 @@ export default function Home() {
               <li><CheckIcon /> Convulsiones, ictus, dolor torácico y escenarios prácticos</li>
               <li><CheckIcon /> Certificado oficial ERC BLS y documentación separada del módulo empresarial</li>
             </ul>
-            <a className="card-link" href="#cronograma">Ver el cronograma completo <ArrowIcon /></a>
+            <a className="card-link" href="/formacion-emergencias-empresas">Ver el programa completo <ArrowIcon /></a>
           </article>
 
           <article className="program-card essential-card">
@@ -201,7 +216,7 @@ export default function Home() {
               <li><CheckIcon /> RCP de calidad y trabajo en pareja</li>
               <li><CheckIcon /> DEA Trainer, escenarios, evaluación y certificado ERC BLS</li>
             </ul>
-            <a className="card-link" href="#cronograma">Ver el itinerario de SVB <ArrowIcon /></a>
+            <a className="card-link" href="/svb-dea-erc">Ver el curso de SVB y DEA <ArrowIcon /></a>
           </article>
         </div>
         <p className="cert-note">
@@ -209,6 +224,11 @@ export default function Home() {
           Support (BLS) de 4 horas presenciales. El módulo empresarial de Primeros
           Auxilios añade 2 horas y se documenta por separado, sin acreditación ERC.
         </p>
+        <nav className="program-detail-links" aria-label="Información detallada de los programas">
+          <a href="/formacion-emergencias-empresas">Programa integral</a>
+          <a href="/svb-dea-erc">SVB y DEA · ERC</a>
+          <a href="/primeros-auxilios-empresas">Primeros Auxilios</a>
+        </nav>
       </section>
 
       <section className="experience" id="metodologia">
@@ -363,20 +383,16 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="eyebrow">Conexión con el ecosistema nacional de RCP</p>
-              <h2>En contacto con AESP‑RCP</h2>
+              <p className="eyebrow">Comunidad nacional de RCP</p>
+              <h2>Formamos parte de AESP‑RCP</h2>
               <p>
-                Mantenemos contacto profesional directo con la Asociación Española
-                para la Promoción de la RCP (AESP‑RCP), el Consejo Nacional que
-                representa al European Resuscitation Council en España.
+                Nuestro equipo forma parte de la Asociación Española para la
+                Promoción de la RCP (AESP‑RCP), el Consejo Nacional que representa al
+                European Resuscitation Council en España.
               </p>
               <a className="resource-text-link" href={aespHref} target="_blank" rel="noreferrer">
                 Conocer AESP‑RCP <ArrowIcon />
               </a>
-              <p className="relationship-note">
-                Esta mención describe un contacto profesional y no implica convenio,
-                patrocinio ni aval institucional.
-              </p>
             </div>
           </article>
         </div>
@@ -468,20 +484,17 @@ export default function Home() {
           <details>
             <summary>Privacidad del contacto</summary>
             <p>
-              Los datos escritos en el formulario no se almacenan ni se envían desde
-              esta web. Se incorporan a un borrador en la aplicación de correo del
-              visitante. Solo si decide enviarlo llegarán a nuestro correo y se usarán
-              para responder a la consulta y preparar la propuesta solicitada. Para
-              solicitar acceso, rectificación o supresión, puede escribir a{' '}
-              <a href={`mailto:${email}`}>{email}</a>.
+              Los datos se envían mediante FormSubmit a nuestro correo para responder
+              a la consulta y preparar la propuesta. FormSubmit indica que conserva
+              las solicitudes durante 30 días. No envíes datos de salud ni información
+              confidencial. <a href="/privacidad">Consulta la información completa</a>.
             </p>
           </details>
           <details>
             <summary>Cookies y almacenamiento técnico</summary>
             <p>
-              Esta web no utiliza cookies de analítica ni de publicidad. Puede guardar
-              en el dispositivo archivos técnicos de la aplicación web para acelerar
-              la carga y permitir su funcionamiento básico sin conexión.
+              Esta web no utiliza cookies de analítica ni de publicidad. El servicio
+              FormSubmit solo interviene cuando se pulsa «Enviar solicitud».
             </p>
           </details>
           <p className="footer-copyright">© 2026 Proyecto Reanima+ Vida</p>
