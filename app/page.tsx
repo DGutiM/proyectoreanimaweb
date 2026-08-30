@@ -8,6 +8,8 @@ const contactHref = '#contacto';
 const appHref = 'https://dgutim.github.io/proyectoreanimavida/';
 const aespHref = 'https://aesp-rcp.es/';
 const aespGuidesHref = 'https://aesp-rcp.es/index.php/guias2025/guias-erc-2025-en-castellano/';
+const ercGuidesHref = 'https://www.erc.edu/science-research/guidelines/guidelines-2025/';
+const fundaeHref = 'https://www.fundae.es/formacion/financiacion';
 const blsGuidelineHref =
   'https://aesp-rcp.es/Documentos_web_AESP/Guias_ERC_2025/ERC_Guidelines_BLS_2025%20ESP.pdf';
 const firstAidGuidelineHref =
@@ -93,8 +95,8 @@ export default function Home() {
           <a href="#programas">Programa</a>
           <a href="#metodologia">Cómo formamos</a>
           <a href="#cronograma">Contenido</a>
-          <a href="#recursos">Guías ERC</a>
-          <a className="desktop-app-link" href="#app">Asistente RCP</a>
+          <a href="#guias-erc">Guías ERC</a>
+          <a href="#app">App Reanima+ Vida</a>
         </nav>
         <a className="button button-small" href={contactHref}>
           Solicitar una propuesta
@@ -317,8 +319,8 @@ export default function Home() {
       </section>
 
       <section className="prevention">
-        <div className="shell prevention-grid menu-anchor" id="fundae">
-          <article className="prevention-card prl-card">
+        <div className="shell prevention-grid">
+          <article className="prevention-card prl-card menu-anchor" id="prevencion-laboral">
             <span className="card-kicker">Prevención y emergencias</span>
             <h2>Una formación útil dentro del sistema preventivo de la empresa</h2>
             <p>
@@ -331,7 +333,7 @@ export default function Home() {
               formación específica que requiera cada puesto.
             </p>
           </article>
-          <article className="prevention-card fundae-card">
+          <article className="prevention-card fundae-card menu-anchor" id="fundae">
             <span className="card-kicker">Formación programada por las empresas</span>
             <h2>Potencialmente bonificable mediante FUNDAE</h2>
             <p>
@@ -343,13 +345,16 @@ export default function Home() {
               La bonificación no es automática ni garantizada: corresponde a la
               empresa o a su entidad organizadora comprobar y tramitar cada edición.
             </p>
+            <a className="resource-text-link fundae-link" href={fundaeHref} target="_blank" rel="noreferrer">
+              Información oficial de FUNDAE <ArrowIcon />
+            </a>
           </article>
         </div>
       </section>
 
-      <section className="resources-section">
-        <div className="shell resources-grid menu-anchor" id="recursos">
-          <article className="guides-panel">
+      <section className="resources-section" id="recursos">
+        <div className="shell resources-grid">
+          <article className="guides-panel menu-anchor" id="guias-erc">
             <span className="card-kicker">Guías oficiales · acceso gratuito</span>
             <h2>Guías ERC 2025 en castellano</h2>
             <p>
@@ -370,9 +375,12 @@ export default function Home() {
             <a className="all-guides-link" href={aespGuidesHref} target="_blank" rel="noreferrer">
               Ver todas las Guías ERC 2025 en castellano
             </a>
+            <a className="erc-source-link" href={ercGuidesHref} target="_blank" rel="noreferrer">
+              Fuente oficial: European Resuscitation Council <ArrowIcon />
+            </a>
           </article>
 
-          <article className="aesp-panel">
+          <article className="aesp-panel menu-anchor" id="aesp-rcp">
             <div className="aesp-logo-wrap">
               <img
                 src="/logo-aesp-rcp.png"

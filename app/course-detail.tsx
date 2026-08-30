@@ -63,7 +63,8 @@ export default function CourseDetail({
         <nav aria-label="Navegación del curso">
           <a href="/">Inicio</a>
           <a href="/#programas">Programas</a>
-          <a href="/#recursos">Guías ERC</a>
+          <a href="/#guias-erc">Guías ERC</a>
+          <a href="/#app">App Reanima+ Vida</a>
         </nav>
         <a className="button button-small" href="/#contacto">Solicitar una propuesta</a>
       </header>

@@ -9,9 +9,11 @@ const sectionLinks = [
   ['Programa', '#programas'],
   ['Cómo formamos', '#metodologia'],
   ['Contenido', '#cronograma'],
-  ['PRL y FUNDAE', '#fundae'],
-  ['Guías ERC y AESP-RCP', '#recursos'],
-  ['Asistente RCP', '#app'],
+  ['PRL y emergencias', '#prevencion-laboral'],
+  ['FUNDAE', '#fundae'],
+  ['Guías ERC', '#guias-erc'],
+  ['AESP-RCP', '#aesp-rcp'],
+  ['App Reanima+ Vida', '#app'],
   ['Preguntas', '#preguntas'],
 ];
 
@@ -85,7 +87,6 @@ export default function MobileMenu({
           <nav aria-label="Secciones de la página">
             {sectionLinks.map(([label, href], index) => (
               <a
-                className={href === '#app' ? 'mobile-menu-app-link' : undefined}
                 href={href}
                 onClick={closeMenu}
                 key={href}
