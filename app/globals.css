@@ -386,7 +386,7 @@ footer { padding-block: 48px 100px; background: #fff; }
 .menu-anchor,
 #programa-integral,
 #resultados {
-  scroll-margin-top: 68px;
+  scroll-margin-top: 24px;
 }
 .resources-section {
   padding-block: 96px;
@@ -1289,12 +1289,10 @@ footer { padding-block: 38px 56px; }
 
 @media (min-width: 1001px) {
   #prevencion-laboral,
-  #fundae {
-    scroll-margin-top: clamp(112px, 20vh, 168px);
-  }
+  #fundae,
   #guias-erc,
   #aesp-rcp {
-    scroll-margin-top: clamp(96px, 14vh, 150px);
+    scroll-margin-top: 24px;
   }
   .desktop-navigation {
     display: flex;
