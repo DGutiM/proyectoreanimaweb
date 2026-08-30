@@ -183,7 +183,7 @@ export default function Home() {
           <article className="program-card erc-card featured-card" id="programa-integral">
             <div className="program-brand-row">
               <span className="card-label">Programa recomendado</span>
-              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="316" height="155" />
+              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="356" height="155" />
             </div>
             <h3>Respuesta Inmediata ante Emergencias</h3>
             <p className="duration"><strong>6 horas</strong><span>4 h SVB/DEA ERC + 2 h Primeros Auxilios</span></p>
@@ -203,7 +203,7 @@ export default function Home() {
           <article className="program-card essential-card">
             <div className="program-brand-row">
               <span className="card-label">Curso esencial</span>
-              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="316" height="155" />
+              <img className="erc-logo" src="/logo-erc.png" alt="European Resuscitation Council" width="356" height="155" />
             </div>
             <h3>Basic Life Support Provider · SVB y DEA</h3>
             <p className="duration"><strong>4 horas</strong><span>Práctica presencial</span></p>
@@ -277,9 +277,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="schedule-section">
+      <section className="schedule-section" id="cronograma">
         <div className="shell">
-          <div className="schedule-heading menu-anchor" id="cronograma">
+          <div className="schedule-heading">
             <div>
               <p className="eyebrow">Contenido visible desde el principio</p>
               <h2>Un cronograma claro, práctico y medible</h2>
