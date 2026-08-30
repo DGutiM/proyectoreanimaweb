@@ -133,7 +133,7 @@ export default function CourseDetail({
             <h2>La formación se adapta al centro, los turnos y el equipo.</h2>
           </div>
           <div>
-            <p>Cuéntanos el número de participantes y las necesidades del centro. Prepararemos una propuesta sin publicar tarifas cerradas.</p>
+            <p>Indícanos participantes, sede y turnos. Prepararemos una propuesta adaptada.</p>
             <a className="contact-email" href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
         </div>

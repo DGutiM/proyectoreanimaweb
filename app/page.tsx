@@ -34,12 +34,12 @@ const firstAidSchedule = [
 ];
 
 const benefits = [
-  ['01', 'Reconocer antes', 'Identificar con rapidez una parada y otras emergencias tiempo-dependientes.'],
-  ['02', 'Actuar con seguridad', 'Iniciar la atención y seguir una secuencia clara hasta la llegada de ayuda.'],
-  ['03', 'Utilizar un DEA', 'Perder el miedo al desfibrilador externo automático y usarlo con seguridad.'],
-  ['04', 'Coordinar al equipo', 'Activar el 112, repartir funciones y reducir las interrupciones de la RCP.'],
-  ['05', 'Resolver escenarios', 'Practicar situaciones realistas de oficina, planta, almacén o laboratorio.'],
-  ['06', 'Generar evidencias', 'Recibir evaluación, registro de asistencia, documentación final y cuestionario de satisfacción.'],
+  ['01', 'Reconocer antes', 'Identificar rápido una parada y otras emergencias tiempo-dependientes.'],
+  ['02', 'Actuar con seguridad', 'Seguir una secuencia segura hasta la llegada de ayuda.'],
+  ['03', 'Utilizar un DEA', 'Usar el desfibrilador externo automático con seguridad.'],
+  ['04', 'Coordinar al equipo', 'Activar el 112, repartir funciones y reducir interrupciones.'],
+  ['05', 'Resolver escenarios', 'Practicar casos de oficina, planta, almacén o laboratorio.'],
+  ['06', 'Documentar la formación', 'Evaluación, asistencia, documentación y cuestionario de satisfacción.'],
 ];
 
 function ArrowIcon() {
@@ -113,11 +113,10 @@ export default function Home() {
               <span> Preparación que se nota.</span>
             </h1>
             <p className="hero-lead">
-              Nuestro programa integral combina el curso oficial de Soporte Vital
-              Básico (BLS) y uso del desfibrilador externo automático (DEA), con
-              acreditación del Consejo Europeo de Resucitación (ERC), y un módulo
-              empresarial independiente de Primeros Auxilios. Seis horas de práctica,
-              escenarios realistas y decisiones que el equipo podrá aplicar.
+              Curso oficial ERC de Soporte Vital Básico (BLS) y uso del
+              desfibrilador externo automático (DEA), más un módulo empresarial
+              independiente de Primeros Auxilios. Seis horas de práctica y
+              escenarios realistas para actuar con seguridad.
             </p>
             <div className="hero-actions">
               <a className="button" href="#programas">
@@ -175,9 +174,8 @@ export default function Home() {
           <p className="eyebrow">Una propuesta integral y una opción esencial</p>
           <h2>Mucho más que aprender a hacer una RCP</h2>
           <p>
-            Recomendamos preparar al equipo para la parada cardiaca y también para
-            las emergencias que aparecen con más frecuencia en el trabajo. Cuando
-            el alcance de la empresa sea más concreto, puede contratarse únicamente
+            Preparamos al equipo para la parada cardiaca y para las emergencias más
+            frecuentes en el trabajo. La empresa también puede contratar únicamente
             el curso oficial de SVB y DEA.
           </p>
         </div>
@@ -190,14 +188,14 @@ export default function Home() {
             <h3>Respuesta Inmediata ante Emergencias</h3>
             <p className="duration"><strong>6 horas</strong><span>4 h SVB/DEA ERC + 2 h Primeros Auxilios</span></p>
             <p>
-              El itinerario oficial de SVB y DEA, más un módulo empresarial de
-              Primeros Auxilios y escenarios adaptados al entorno de trabajo.
+              Curso oficial de SVB y DEA más Primeros Auxilios, con escenarios
+              adaptados al entorno de trabajo.
             </p>
             <ul className="mini-list">
               <li><CheckIcon /> RCP de calidad, DEA Trainer y coordinación del equipo</li>
               <li><CheckIcon /> Atragantamiento, hemorragia grave, quemaduras y anafilaxia</li>
               <li><CheckIcon /> Convulsiones, ictus, dolor torácico y escenarios prácticos</li>
-              <li><CheckIcon /> Certificado oficial ERC BLS y documentación separada del módulo empresarial</li>
+              <li><CheckIcon /> Certificado ERC BLS y documentación propia de Primeros Auxilios</li>
             </ul>
             <a className="card-link" href="/formacion-emergencias-empresas">Ver el programa completo <ArrowIcon /></a>
           </article>
@@ -210,8 +208,8 @@ export default function Home() {
             <h3>Basic Life Support Provider · SVB y DEA</h3>
             <p className="duration"><strong>4 horas</strong><span>Práctica presencial</span></p>
             <p>
-              Soporte Vital Básico y uso del desfibrilador externo automático,
-              acreditado por el Consejo Europeo de Resucitación (ERC).
+              Curso oficial de Soporte Vital Básico y uso del DEA, acreditado por
+              el Consejo Europeo de Resucitación (ERC).
             </p>
             <ul className="mini-list">
               <li><CheckIcon /> Reconocimiento, alerta al 112 y cadena de supervivencia</li>
@@ -222,9 +220,9 @@ export default function Home() {
           </article>
         </div>
         <p className="cert-note">
-          La acreditación oficial ERC corresponde exclusivamente al curso Basic Life
-          Support (BLS) de 4 horas presenciales. El módulo empresarial de Primeros
-          Auxilios añade 2 horas y se documenta por separado, sin acreditación ERC.
+          El certificado oficial ERC corresponde exclusivamente al curso Basic Life
+          Support (BLS) de 4 horas. Primeros Auxilios añade 2 horas y se documenta
+          por separado, sin acreditación ERC.
         </p>
         <nav className="program-detail-links" aria-label="Información detallada de los programas">
           <a href="/formacion-emergencias-empresas">Programa integral</a>
@@ -249,9 +247,9 @@ export default function Home() {
             <p className="eyebrow">Una metodología para recordar y actuar</p>
             <h2>Menos diapositivas. Más manos, decisiones y escenarios.</h2>
             <p>
-              Cada destreza se explica de forma breve, se demuestra y se practica
-              con retroalimentación. El grupo integra después la secuencia completa
-              en situaciones de oficina, planta, almacén o laboratorio.
+              Explicamos, demostramos y practicamos cada destreza con
+              retroalimentación. Después, el equipo integra la secuencia completa
+              en escenarios de oficina, planta, almacén o laboratorio.
             </p>
             <ol className="method-steps">
               <li><span>01</span><div><strong>Demostración</strong><small>El instructor muestra la secuencia y los puntos críticos.</small></div></li>
@@ -287,8 +285,8 @@ export default function Home() {
               <h2>Un cronograma claro, práctico y medible</h2>
             </div>
             <p>
-              La propuesta final se ajusta a la realidad del centro, pero el núcleo
-              práctico mantiene una secuencia progresiva y una evaluación final.
+              Adaptamos la propuesta al centro manteniendo una secuencia práctica
+              progresiva y una evaluación final.
             </p>
           </div>
           <div className="schedule-grid">
@@ -324,9 +322,8 @@ export default function Home() {
             <span className="card-kicker">Prevención y emergencias</span>
             <h2>Una formación útil dentro del sistema preventivo de la empresa</h2>
             <p>
-              El programa puede integrarse en la preparación ante emergencias del
-              centro y complementar su plan de emergencias, la organización de
-              Primeros Auxilios y la capacitación de las personas designadas.
+              El programa puede integrarse en la preparación ante emergencias,
+              complementar el plan del centro y formar a las personas designadas.
             </p>
             <p className="small-print">
               No sustituye la evaluación de riesgos, los protocolos propios ni la
@@ -337,13 +334,12 @@ export default function Home() {
             <span className="card-kicker">Formación programada por las empresas</span>
             <h2>Potencialmente bonificable mediante FUNDAE</h2>
             <p>
-              La acción puede gestionarse dentro de la formación programada por la
-              empresa cuando exista crédito disponible y se cumplan los requisitos
-              administrativos, de comunicación, impartición y justificación aplicables.
+              Puede gestionarse como formación programada por la empresa si dispone
+              de crédito y cumple los requisitos aplicables.
             </p>
             <p className="small-print">
-              La bonificación no es automática ni garantizada: corresponde a la
-              empresa o a su entidad organizadora comprobar y tramitar cada edición.
+              La bonificación no es automática ni garantizada. Su comprobación y
+              tramitación corresponde a la empresa o a su entidad organizadora.
             </p>
             <a className="resource-text-link fundae-link" href={fundaeHref} target="_blank" rel="noreferrer">
               Información oficial de FUNDAE <ArrowIcon />
@@ -358,9 +354,8 @@ export default function Home() {
             <span className="card-kicker">Guías oficiales · acceso gratuito</span>
             <h2>Guías ERC 2025 en castellano</h2>
             <p>
-              Acceso directo a las recomendaciones oficiales traducidas y publicadas
-              por AESP‑RCP. Son la referencia científica que sustenta nuestra
-              formación en Soporte Vital Básico y Primeros Auxilios.
+              Acceso directo a las recomendaciones oficiales en castellano,
+              traducidas y publicadas por AESP‑RCP, que sustentan nuestra formación.
             </p>
             <div className="guide-links">
               <a href={blsGuidelineHref} target="_blank" rel="noreferrer">
@@ -394,8 +389,7 @@ export default function Home() {
               <p className="eyebrow">Comunidad nacional de RCP</p>
               <h2>Formamos parte de AESP‑RCP</h2>
               <p>
-                Nuestro equipo forma parte de la Asociación Española para la
-                Promoción de la RCP (AESP‑RCP), el Consejo Nacional que representa al
+                Formamos parte de AESP‑RCP, el Consejo Nacional que representa al
                 European Resuscitation Council en España.
               </p>
               <a className="resource-text-link" href={aespHref} target="_blank" rel="noreferrer">
@@ -412,8 +406,8 @@ export default function Home() {
             <p className="eyebrow">La formación continúa</p>
             <h2>Asistente RCP para repasar la secuencia de actuación</h2>
             <p>
-              Nuestra aplicación de reanimación permite familiarizarse con los pasos
-              esenciales y mantener el algoritmo presente después del curso.
+              Una herramienta para repasar los pasos esenciales y mantener presente
+              la secuencia después del curso.
             </p>
             <a className="button button-light" href={appHref} target="_blank" rel="noreferrer">
               Abrir Asistente RCP <ArrowIcon />
@@ -445,7 +439,7 @@ export default function Home() {
         <div className="faq-list">
           <details>
             <summary>¿Cuántas personas participan en cada grupo?</summary>
-            <p>Trabajamos con un máximo de 8 participantes por instructor para asegurar tiempo real de práctica y retroalimentación.</p>
+            <p>Máximo 8 participantes por instructor para garantizar práctica y retroalimentación.</p>
           </details>
           <details>
             <summary>¿Se puede impartir en nuestras instalaciones?</summary>
@@ -453,11 +447,11 @@ export default function Home() {
           </details>
           <details>
             <summary>¿Qué acreditación recibe el participante?</summary>
-            <p>El curso BLS de 4 horas presenciales incluye certificado oficial ERC. El módulo empresarial de Primeros Auxilios añade 2 horas, se documenta por separado y no forma parte de la acreditación ERC.</p>
+            <p>El curso BLS de 4 horas incluye certificado oficial ERC. Primeros Auxilios añade 2 horas, se documenta por separado y no tiene acreditación ERC.</p>
           </details>
           <details>
             <summary>¿La formación se puede bonificar con FUNDAE?</summary>
-            <p>Puede ser potencialmente bonificable si la empresa dispone de crédito y cumple los requisitos aplicables. La tramitación corresponde a la empresa o a su entidad organizadora.</p>
+            <p>Puede ser potencialmente bonificable si existe crédito y se cumplen los requisitos. La empresa o su entidad organizadora debe tramitarla.</p>
           </details>
         </div>
       </section>
@@ -469,9 +463,8 @@ export default function Home() {
             <p className="eyebrow">Hablemos de vuestro equipo</p>
             <h2>Diseñamos la formación alrededor de la empresa, no al revés.</h2>
             <p className="contact-intro">
-              Cuéntanos cuántas personas queréis formar y cómo se organiza vuestro
-              centro. Prepararemos una propuesta adaptada, sin publicar tarifas
-              cerradas ni obligaros a elegir antes de hablar.
+              Indícanos cuántas personas queréis formar, vuestra organización y las
+              fechas orientativas. Prepararemos una propuesta adaptada.
             </p>
             <a className="contact-email" href={`mailto:${email}`}>{email}</a>
           </div>

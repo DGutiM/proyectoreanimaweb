@@ -24,7 +24,7 @@ export default function IntegratedTrainingPage() {
     <CourseDetail
       eyebrow="Programa recomendado para empresas"
       title="Respuesta Inmediata ante Emergencias"
-      intro="Un programa completo que une el curso oficial ERC de Soporte Vital Básico y uso del DEA con un módulo empresarial independiente de Primeros Auxilios y escenarios del centro de trabajo."
+      intro="Curso oficial ERC de SVB y DEA más un módulo independiente de Primeros Auxilios, con escenarios del centro de trabajo."
       image="/formacion-practica.jpg"
       imageAlt="Equipo practicando reanimación y uso de un DEA Trainer"
       stats={[
@@ -32,8 +32,8 @@ export default function IntegratedTrainingPage() {
         { label: 'Estructura', value: '4 h ERC + 2 h PA' },
         { label: 'Grupo', value: 'Hasta 8 por instructor' },
       ]}
-      sectionTitle="Un itinerario para la parada cardiaca y las emergencias más frecuentes"
-      sectionIntro="La primera parte desarrolla el programa oficial BLS del ERC. La segunda amplía la capacidad de respuesta del equipo ante otras situaciones relevantes en la empresa."
+      sectionTitle="Un itinerario para responder ante la parada cardiaca y otras emergencias"
+      sectionIntro="Primero se desarrolla el programa oficial BLS del ERC; después, la respuesta ante otras emergencias relevantes en la empresa."
       modules={[
         { number: '01', title: 'Reconocimiento y 112', description: 'Valoración inicial, respiración anormal, activación de ayuda y petición del DEA.' },
         { number: '02', title: 'RCP de calidad', description: 'Compresiones, ventilaciones, relevos y coordinación de dos intervinientes.' },
@@ -46,7 +46,7 @@ export default function IntegratedTrainingPage() {
         'Curso oficial Basic Life Support del ERC',
         'Módulo independiente de Primeros Auxilios',
         'Maniquíes, DEA Trainer y material de simulación',
-        'Evaluación, asistencia, satisfacción y gestión documental',
+        'Evaluación, asistencia, satisfacción y documentación',
       ]}
       certification="Certificado oficial ERC BLS y documentación separada de Primeros Auxilios"
       note="La acreditación ERC se aplica exclusivamente al itinerario oficial de SVB y DEA."

@@ -23,8 +23,8 @@ export default function FirstAidPage() {
   return (
     <CourseDetail
       eyebrow="Módulo empresarial de Primeros Auxilios"
-      title="Primeros Auxilios para las emergencias que pueden ocurrir en el trabajo"
-      intro="Dos horas centradas en reconocer, priorizar y actuar ante situaciones frecuentes y tiempo-dependientes, con prácticas y escenarios adaptados a oficina, planta, almacén o laboratorio."
+      title="Primeros Auxilios ante emergencias en el trabajo"
+      intro="Dos horas para reconocer, priorizar y actuar mediante prácticas y escenarios adaptados al entorno de trabajo."
       image="/formacion-practica.jpg"
       imageAlt="Participantes practicando una respuesta ante una emergencia simulada"
       stats={[
@@ -32,8 +32,8 @@ export default function FirstAidPage() {
         { label: 'Formato', value: 'Módulo empresarial' },
         { label: 'Metodología', value: 'Práctica y escenarios' },
       ]}
-      sectionTitle="Una secuencia clara para las emergencias más relevantes del entorno laboral"
-      sectionIntro="El contenido puede ajustarse a los riesgos y recursos del centro, manteniendo una estructura común de autoprotección, valoración inicial, activación del 112 y actuación segura."
+      sectionTitle="Una respuesta clara ante las emergencias laborales más relevantes"
+      sectionIntro="Adaptamos los escenarios al centro manteniendo una secuencia común: autoprotección, valoración inicial, activación del 112 y actuación segura."
       modules={[
         { number: '01', title: 'Valoración inicial', description: 'Autoprotección, consciencia, respiración, síncope y posición lateral de seguridad.' },
         { number: '02', title: 'Atragantamiento', description: 'Reconocimiento y actuación práctica ante obstrucción de la vía aérea.' },

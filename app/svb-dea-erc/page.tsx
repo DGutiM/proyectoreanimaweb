@@ -24,7 +24,7 @@ export default function SvbDeaPage() {
     <CourseDetail
       eyebrow="Basic Life Support Provider · ERC"
       title="Soporte Vital Básico y uso del desfibrilador externo automático"
-      intro="Un curso oficial del European Resuscitation Council para reconocer una parada cardiaca, activar la ayuda, realizar una RCP de calidad y utilizar un DEA con seguridad."
+      intro="Curso oficial del European Resuscitation Council para reconocer una parada, activar la ayuda, realizar RCP de calidad y usar un DEA con seguridad."
       image="/hero-svb.jpg"
       imageAlt="Maniquí preparado para una práctica de Soporte Vital Básico"
       stats={[
@@ -32,8 +32,8 @@ export default function SvbDeaPage() {
         { label: 'Grupo', value: 'Hasta 8 por instructor' },
         { label: 'Acreditación', value: 'Certificado ERC BLS' },
       ]}
-      sectionTitle="De reconocer la emergencia a coordinar una respuesta completa"
-      sectionIntro="La edición avanza desde las habilidades esenciales hasta escenarios integrados, con práctica deliberada, retroalimentación y evaluación final."
+      sectionTitle="De reconocer la parada a coordinar la respuesta"
+      sectionIntro="Práctica progresiva, retroalimentación, escenarios integrados y evaluación final."
       modules={[
         { number: '01', title: 'Reconocer y activar', description: 'Seguridad, respuesta, respiración anormal, alerta al 112 y petición del DEA.' },
         { number: '02', title: 'RCP de calidad', description: 'Compresiones, ventilaciones 30:2, relevos y reducción de interrupciones.' },
